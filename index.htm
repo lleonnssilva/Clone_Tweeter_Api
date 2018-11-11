@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Teste socket</title>
+
+   
+</head>
+<body>
+<div align="center" >
+	<SPAN>
+	<SPAN id="l">0</SPAN>
+	<IMG SRC="./like.png" height="50" width="50" name="pic1">
+	</SPAN>
+	
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+	<script type="text/javascript">
+		var socket = io('http://localhost:3000');
+		
+		socket.on('like',function(data){
+			const d = document.getElementById("l");
+			d.innerHTML=data.likes;
+		
+		});
+	
+	</script>
+</body>
+</html>
