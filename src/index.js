@@ -6,8 +6,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-// mongoose.connect("mongodb://localhost:27017/leobd",
-mongoose.connect("mongodb://leo:leo123@ds155263.mlab.com:55263/leobd",
+mongoose.connect("mongodb://localhost:27017/leobd",
 { 
     useNewUrlParser: true
 }
